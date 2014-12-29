@@ -33,23 +33,14 @@ void ColocarLIFO(COISA** lel,int idade)
 	COISA* tmp;
 	
 
-	if(*lel == NULL)/*First Time running*/
-	{
-		tmp = (COISA *)malloc(sizeof(COISA));
-		if(tmp == NULL) return;
-		tmp->idade = idade;
-		tmp->next = NULL;
-		*lel = tmp;
-
-	}
-	else
-	{
+	
 		tmp = (COISA *)malloc(sizeof(COISA));
 		if(tmp == NULL) return;
 		tmp->idade = idade;
 		tmp->next = *lel;
 		*lel = tmp;
-	}
+
+	
 		
 
 
